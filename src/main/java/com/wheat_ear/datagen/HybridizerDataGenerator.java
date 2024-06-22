@@ -13,6 +13,7 @@ public class HybridizerDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = dataGenerator.createPack();
 
 		pack.addProvider(ModModelGenerator::new);
+		pack.addProvider(ModRecipeGenerator::new);
 		pack.addProvider(ModLootTableGenerator::new);
 		pack.addProvider(ModWorldGenerator::new);
 	}
