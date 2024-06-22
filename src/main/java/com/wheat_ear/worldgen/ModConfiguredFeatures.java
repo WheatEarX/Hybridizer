@@ -11,9 +11,11 @@ import net.minecraft.world.gen.feature.Feature;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> OAK_BIRCH = of("oak_birch");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MEGA_CHERRY = of("mega_cherry");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> featureRegisterable) {
         ConfiguredFeatures.register(featureRegisterable, OAK_BIRCH, Feature.TREE, ModFeatureConfigs.OAK_BIRCH);
+        ConfiguredFeatures.register(featureRegisterable, MEGA_CHERRY, Feature.TREE, ModFeatureConfigs.MEGA_CHERRY);
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> of(String id) {

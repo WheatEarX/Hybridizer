@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hybridizer:block/mega_cherry_sapling"
+  }
+}

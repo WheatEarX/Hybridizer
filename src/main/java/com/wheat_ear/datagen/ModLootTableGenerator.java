@@ -16,5 +16,6 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.OAK_BIRCH_SAPLING, drops(ModItems.OAK_BIRCH_SAPLING));
+        addDrop(ModBlocks.MEGA_CHERRY_SAPLING, drops(ModItems.MEGA_CHERRY_SAPLING));
     }
 }
