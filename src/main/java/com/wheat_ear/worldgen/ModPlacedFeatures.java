@@ -14,6 +14,7 @@ public class ModPlacedFeatures {
 
     public static void bootstrap(Registerable<PlacedFeature> featureRegisterable) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
-        PlacedFeatures.register(featureRegisterable, OAK_BIRCH, registryEntryLookup.getOrThrow(ModConfiguredFeatures.OAK_BIRCH), PlacedFeatures.wouldSurvive(ModBlocks.OAK_BIRCH_SAPLING));
+        PlacedFeatures.register(featureRegisterable, OAK_BIRCH, registryEntryLookup.getOrThrow(ModConfiguredFeatures.OAK_BIRCH),
+                PlacedFeatures.wouldSurvive(ModBlocks.OAK_BIRCH_SAPLING));
     }
 }
