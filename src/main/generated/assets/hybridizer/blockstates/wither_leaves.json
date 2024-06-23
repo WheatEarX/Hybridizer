@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hybridizer:block/wither_leaves"
+    }
+  }
+}

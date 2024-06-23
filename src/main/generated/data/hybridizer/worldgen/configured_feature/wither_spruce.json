@@ -9,19 +9,27 @@
       }
     },
     "foliage_placer": {
-      "type": "minecraft:cherry_foliage_placer",
-      "corner_hole_chance": 0.25,
-      "hanging_leaves_chance": 0.25,
-      "hanging_leaves_extension_chance": 0.5,
-      "height": 5,
-      "offset": 0,
-      "radius": 4,
-      "wide_bottom_layer_hole_chance": 0.25
+      "type": "minecraft:spruce_foliage_placer",
+      "offset": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 2,
+        "min_inclusive": 0
+      },
+      "radius": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 3,
+        "min_inclusive": 2
+      },
+      "trunk_height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 2,
+        "min_inclusive": 1
+      }
     },
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:cherry_leaves",
+        "Name": "hybridizer:wither_leaves",
         "Properties": {
           "distance": "7",
           "persistent": "false",
@@ -33,20 +41,20 @@
     "ignore_vines": true,
     "minimum_size": {
       "type": "minecraft:two_layers_feature_size",
-      "limit": 1,
+      "limit": 2,
       "lower_size": 0,
       "upper_size": 2
     },
     "trunk_placer": {
-      "type": "minecraft:mega_jungle_trunk_placer",
-      "base_height": 14,
+      "type": "minecraft:straight_trunk_placer",
+      "base_height": 5,
       "height_rand_a": 2,
-      "height_rand_b": 19
+      "height_rand_b": 1
     },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:cherry_log",
+        "Name": "minecraft:spruce_log",
         "Properties": {
           "axis": "y"
         }

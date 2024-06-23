@@ -14,13 +14,16 @@ import net.minecraft.world.gen.feature.PlacedFeatures;
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> OAK_BIRCH = of("oak_birch");
     public static final RegistryKey<PlacedFeature> MEGA_CHERRY = of("mega_cherry");
+    public static final RegistryKey<PlacedFeature> WITHER_SPRUCE = of("wither_spruce");
 
     public static void bootstrap(Registerable<PlacedFeature> featureRegisterable) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
         PlacedFeatures.register(featureRegisterable, OAK_BIRCH, registryEntryLookup.getOrThrow(ModConfiguredFeatures.OAK_BIRCH),
                 PlacedFeatures.wouldSurvive(ModBlocks.OAK_BIRCH_SAPLING));
-        PlacedFeatures.register(featureRegisterable, MEGA_CHERRY, registryEntryLookup.getOrThrow(ModConfiguredFeatures.OAK_BIRCH),
-                PlacedFeatures.wouldSurvive(ModBlocks.OAK_BIRCH_SAPLING));
+        PlacedFeatures.register(featureRegisterable, MEGA_CHERRY, registryEntryLookup.getOrThrow(ModConfiguredFeatures.MEGA_CHERRY),
+                PlacedFeatures.wouldSurvive(ModBlocks.MEGA_CHERRY_SAPLING));
+        PlacedFeatures.register(featureRegisterable, WITHER_SPRUCE, registryEntryLookup.getOrThrow(ModConfiguredFeatures.WITHER_SPRUCE),
+                PlacedFeatures.wouldSurvive(ModBlocks.WITHER_SPRUCE_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> of(String id) {

@@ -14,9 +14,17 @@ public class ModBlocks {
             AbstractBlock.Settings.copy(Blocks.OAK_SAPLING));
     public static final Block MEGA_CHERRY_SAPLING = new SaplingBlock(ModSaplingGenerator.MEGA_CHERRY,
             AbstractBlock.Settings.copy(Blocks.OAK_SAPLING));
+    public static final Block WITHER_SPRUCE_SAPLING = new SaplingBlock(ModSaplingGenerator.WITHER_SPRUCE,
+            AbstractBlock.Settings.copy(Blocks.OAK_SAPLING));
+    public static final Block WITHER_LEAVES = new WitherSpruceLeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES));
 
     public static void registerModBlocks() {
-        Registry.register(Registries.BLOCK, new Identifier(Hybridizer.MOD_ID, "oak_birch_sapling"), OAK_BIRCH_SAPLING);
-        Registry.register(Registries.BLOCK, new Identifier(Hybridizer.MOD_ID, "mega_cherry_sapling"), MEGA_CHERRY_SAPLING);
+        registerModBlock("oak_birch_sapling", OAK_BIRCH_SAPLING);
+        registerModBlock("mega_cherry_sapling", MEGA_CHERRY_SAPLING);
+        registerModBlock("wither_leaves", WITHER_LEAVES);
+    }
+
+    public static void registerModBlock(String id, Block block) {
+        Registry.register(Registries.BLOCK, new Identifier(Hybridizer.MOD_ID, id), block);
     }
 }

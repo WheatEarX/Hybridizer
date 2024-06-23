@@ -1,12 +1,12 @@
 {
-  "feature": "hybridizer:oak_birch",
+  "feature": "hybridizer:mega_cherry",
   "placement": [
     {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "hybridizer:oak_birch_sapling",
+          "Name": "hybridizer:mega_cherry_sapling",
           "Properties": {
             "stage": "0"
           }
