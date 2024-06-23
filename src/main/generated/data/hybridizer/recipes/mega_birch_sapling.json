@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:jungle_sapling"
+    },
+    "c": {
+      "item": "minecraft:cherry_sapling"
+    }
+  },
+  "pattern": [
+    "cb",
+    "bc"
+  ],
+  "result": {
+    "count": 2,
+    "id": "hybridizer:mega_birch_sapling"
+  }
+}

@@ -14,6 +14,6 @@ public class ModItems {
 
     public static void registerModItems() {
         Registry.register(Registries.ITEM, new Identifier(Hybridizer.MOD_ID, "oak_birch_sapling"), OAK_BIRCH_SAPLING);
-        Registry.register(Registries.ITEM, new Identifier(Hybridizer.MOD_ID, "mega_birch_sapling"), MEGA_CHERRY_SAPLING);
+        Registry.register(Registries.ITEM, new Identifier(Hybridizer.MOD_ID, "mega_cherry_sapling"), MEGA_CHERRY_SAPLING);
     }
 }
