@@ -37,5 +37,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.JUNGLE_SAPLING),
                         FabricRecipeProvider.conditionsFromItem(Items.JUNGLE_SAPLING))
                 .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WITHER_SPRUCE_SAPLING, 2)
+                .pattern(" w ").pattern("wsw").pattern(" w ")
+                .input('w', Items.WITHER_ROSE)
+                .input('s', Items.SPRUCE_SAPLING)
+                .criterion(FabricRecipeProvider.hasItem(Items.WITHER_ROSE),
+                        FabricRecipeProvider.conditionsFromItem(Items.WITHER_ROSE))
+                .criterion(FabricRecipeProvider.hasItem(Items.SPRUCE_SAPLING),
+                        FabricRecipeProvider.conditionsFromItem(Items.SPRUCE_SAPLING))
+                .offerTo(exporter);
     }
 }

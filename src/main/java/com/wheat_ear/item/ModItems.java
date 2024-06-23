@@ -11,9 +11,13 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     public static final Item OAK_BIRCH_SAPLING = new BlockItem(ModBlocks.OAK_BIRCH_SAPLING, new Item.Settings());
     public static final Item MEGA_CHERRY_SAPLING = new BlockItem(ModBlocks.MEGA_CHERRY_SAPLING, new Item.Settings());
+    public static final Item WITHER_SPRUCE_SAPLING = new BlockItem(ModBlocks.WITHER_SPRUCE_SAPLING, new Item.Settings());
+    public static final Item WITHER_LEAVES = new BlockItem(ModBlocks.WITHER_LEAVES, new Item.Settings());
 
     public static void registerModItems() {
         Registry.register(Registries.ITEM, new Identifier(Hybridizer.MOD_ID, "oak_birch_sapling"), OAK_BIRCH_SAPLING);
         Registry.register(Registries.ITEM, new Identifier(Hybridizer.MOD_ID, "mega_cherry_sapling"), MEGA_CHERRY_SAPLING);
+        Registry.register(Registries.ITEM, new Identifier(Hybridizer.MOD_ID, "wither_spruce_sapling"), WITHER_SPRUCE_SAPLING);
+        Registry.register(Registries.ITEM, new Identifier(Hybridizer.MOD_ID, "wither_leaves"), WITHER_LEAVES);
     }
 }

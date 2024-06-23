@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "hybridizer:block/wither_spruce_sapling"
+  }
+}

@@ -22,9 +22,9 @@ public class ModFeatureConfigs {
             .ignoreVines().build();
     public static final TreeFeatureConfig MEGA_CHERRY = new TreeFeatureConfig.Builder(BlockStateProvider.of(Blocks.CHERRY_LOG),
             new MegaJungleTrunkPlacer(14, 2, 19), BlockStateProvider.of(Blocks.CHERRY_LEAVES),
-            new CherryFoliagePlacer(UniformIntProvider.create(2, 5), ConstantIntProvider.create(1), UniformIntProvider.create(4, 6),
-                    0.25F, 0.5F, 0.25F, 0.5F),
-            new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build();
+            new CherryFoliagePlacer(UniformIntProvider.create(2, 5), ConstantIntProvider.create(1), ConstantIntProvider.create(6),
+                    0.5F, 0.5F, 0.25F, 0.25F),
+            new TwoLayersFeatureSize(1, 1, 3)).ignoreVines().build();
     public static final TreeFeatureConfig WITHER_SPRUCE = new TreeFeatureConfig.Builder(BlockStateProvider.of(Blocks.SPRUCE_LOG),
             new StraightTrunkPlacer(5, 2, 1), BlockStateProvider.of(ModBlocks.WITHER_LEAVES),
             new SpruceFoliagePlacer(UniformIntProvider.create(2, 3), UniformIntProvider.create(0, 2), UniformIntProvider.create(1, 2)),

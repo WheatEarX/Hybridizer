@@ -21,6 +21,7 @@ public class ModBlocks {
     public static void registerModBlocks() {
         registerModBlock("oak_birch_sapling", OAK_BIRCH_SAPLING);
         registerModBlock("mega_cherry_sapling", MEGA_CHERRY_SAPLING);
+        registerModBlock("wither_spruce_sapling", WITHER_SPRUCE_SAPLING);
         registerModBlock("wither_leaves", WITHER_LEAVES);
     }
 

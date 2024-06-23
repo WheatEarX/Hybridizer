@@ -1,4 +1,6 @@
 {
   "block.hybridizer.oak_birch_sapling": "Oak Birch Sapling",
-  "block.hybridizer.mega_cherry_sapling": "Mega Cherry Sapling"
+  "block.hybridizer.mega_cherry_sapling": "Mega Cherry Sapling",
+  "block.hybridizer.wither_spruce_sapling": "Wither Spruce Sapling",
+  "block.hybridizer.wither_leaves": "Wither Leaves"
 }

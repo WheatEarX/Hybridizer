@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "s": {
+      "item": "minecraft:spruce_sapling"
+    },
+    "w": {
+      "item": "minecraft:wither_rose"
+    }
+  },
+  "pattern": [
+    " w ",
+    "wsw",
+    " w "
+  ],
+  "result": {
+    "count": 2,
+    "id": "hybridizer:wither_spruce_sapling"
+  }
+}

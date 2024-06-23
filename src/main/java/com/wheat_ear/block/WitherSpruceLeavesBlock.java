@@ -12,7 +12,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
 
 public class WitherSpruceLeavesBlock extends LeavesBlock {
@@ -20,6 +19,7 @@ public class WitherSpruceLeavesBlock extends LeavesBlock {
         super(settings);
     }
 
+    @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         super.randomDisplayTick(state, world, pos, random);
 
@@ -37,12 +37,11 @@ public class WitherSpruceLeavesBlock extends LeavesBlock {
         }
     }
 
-    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
-        if (!world.isClient && world.getDifficulty() != Difficulty.PEACEFUL) {
-            if (entity instanceof LivingEntity livingEntity) {
-                if (!livingEntity.isInvulnerableTo(world.getDamageSources().wither())) {
-                    livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 300, 2));
-                }
+    @Override
+    public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
+        if (!world.isClient && entity instanceof LivingEntity livingEntity) {
+            if (!livingEntity.isInvulnerableTo(world.getDamageSources().wither())) {
+                livingEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 300, 2));
             }
         }
     }
