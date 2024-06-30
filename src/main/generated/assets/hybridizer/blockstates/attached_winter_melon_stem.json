@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hybridizer:block/attached_winter_melon_stem",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "hybridizer:block/attached_winter_melon_stem",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "hybridizer:block/attached_winter_melon_stem",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "hybridizer:block/attached_winter_melon_stem"
+    }
+  }
+}

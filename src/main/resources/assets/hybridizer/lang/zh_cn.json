@@ -1,6 +1,12 @@
 {
+  "itemGroup.hybridizers": "杂交植物",
   "block.hybridizer.oak_birch_sapling": "橡桦树树苗",
   "block.hybridizer.mega_cherry_sapling": "巨型樱花树苗",
   "block.hybridizer.wither_spruce_sapling": "凋零云杉树苗",
-  "block.hybridizer.wither_leaves": "凋零树叶"
+  "block.hybridizer.wither_leaves": "凋零树叶",
+  "block.hybridizer.winter_melon": "冰西瓜",
+  "block.hybridizer.winter_melon_stem": "冰西瓜茎",
+  "block.hybridizer.attached_winter_melon_stem": "结果的冰西瓜茎",
+  "item.hybridizer.winter_melon_slice": "冰西瓜片",
+  "item.hybridizer.winter_melon_seeds": "冰西瓜种子"
 }

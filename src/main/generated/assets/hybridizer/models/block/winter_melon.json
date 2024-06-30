@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "hybridizer:block/winter_melon_top",
+    "side": "hybridizer:block/winter_melon_side"
+  }
+}

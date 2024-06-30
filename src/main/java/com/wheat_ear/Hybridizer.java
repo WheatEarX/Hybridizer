@@ -14,6 +14,7 @@ public class Hybridizer implements ModInitializer {
 	public void onInitialize() {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		ModItems.registerModItemGroups();
 
 		LOGGER.info("Mod Hybridizer has been initialized");
 	}

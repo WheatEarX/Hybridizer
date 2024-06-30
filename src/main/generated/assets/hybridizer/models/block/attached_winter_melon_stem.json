@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/stem_fruit",
+  "textures": {
+    "stem": "hybridizer:block/winter_melon_stem",
+    "upperstem": "hybridizer:block/attached_winter_melon_stem"
+  }
+}
