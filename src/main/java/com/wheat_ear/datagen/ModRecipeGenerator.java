@@ -51,6 +51,16 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(SPRUCE_SAPLING))
                 .offerTo(exporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, WINTER_MELON_SLICE, 1)
+                .pattern(" s ").pattern("sws").pattern(" s ")
+                .input('w', MELON_SLICE)
+                .input('s', ICE)
+                .criterion(FabricRecipeProvider.hasItem(MELON_SLICE),
+                        FabricRecipeProvider.conditionsFromItem(MELON_SLICE))
+                .criterion(FabricRecipeProvider.hasItem(ICE),
+                        FabricRecipeProvider.conditionsFromItem(ICE))
+                .offerTo(exporter);
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, WINTER_MELON_SEEDS, 1)
                 .input(WINTER_MELON_SLICE)
                 .criterion(FabricRecipeProvider.hasItem(WINTER_MELON_SLICE),
@@ -81,12 +91,12 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(POTATO_BREAD), RecipeCategory.FOOD,
-                BAKED_POTATO_BREAD, 0.1F, 200);
+                BAKED_POTATO_BREAD, 0.1F, 200).offerTo(exporter);
 
         CookingRecipeJsonBuilder.createSmoking(Ingredient.ofItems(POTATO_BREAD), RecipeCategory.FOOD,
-                BAKED_POTATO_BREAD, 0.1F, 200);
+                BAKED_POTATO_BREAD, 0.1F, 200).offerTo(exporter);
 
         CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.ofItems(POTATO_BREAD), RecipeCategory.FOOD,
-                BAKED_POTATO_BREAD, 0.1F, 200);
+                BAKED_POTATO_BREAD, 0.1F, 600).offerTo(exporter);
     }
 }
