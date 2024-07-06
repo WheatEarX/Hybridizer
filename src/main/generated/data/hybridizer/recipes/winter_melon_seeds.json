@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "hybridizer:winter_melon_slice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "hybridizer:winter_melon_seeds"
+  }
+}

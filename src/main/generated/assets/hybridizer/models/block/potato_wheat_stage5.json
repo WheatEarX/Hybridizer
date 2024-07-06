@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "hybridizer:block/potato_wheat_stage5"
+  }
+}

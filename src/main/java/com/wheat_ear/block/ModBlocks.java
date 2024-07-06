@@ -21,6 +21,7 @@ public class ModBlocks {
     public static final Block ATTACHED_WITHER_MELON_STEM = new AttachedStemBlock(ModRegistryKeys.WINTER_MELON_STEM,
             ModRegistryKeys.WINTER_MELON_STEM, ModRegistryKeys.WINTER_MELON_SEEDS,
             AbstractBlock.Settings.copy(Blocks.ATTACHED_MELON_STEM));
+    public static final Block POTATO_WHEAT = new PotatoWheatBlock(AbstractBlock.Settings.copy(Blocks.WHEAT));
 
     public static void registerModBlocks() {
         registerModBlock("oak_birch_sapling", OAK_BIRCH_SAPLING);
@@ -30,6 +31,7 @@ public class ModBlocks {
         registerModBlock("winter_melon", WINTER_MELON);
         registerModBlock("winter_melon_stem", WITHER_MELON_STEM);
         registerModBlock("attached_winter_melon_stem", ATTACHED_WITHER_MELON_STEM);
+        registerModBlock("potato_wheat", POTATO_WHEAT);
     }
 
     public static void registerModBlock(String id, Block block) {

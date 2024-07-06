@@ -18,6 +18,10 @@ public class ModItems {
     public static final Item WINTER_MELON = new BlockItem(ModBlocks.WINTER_MELON, new Item.Settings());
     public static final Item WINTER_MELON_SLICE = new FrozenFoodItem(new Item.Settings().food(ModFoodComponents.WINTER_MELON_SLICE));
     public static final Item WINTER_MELON_SEEDS = new AliasedBlockItem(ModBlocks.WITHER_MELON_STEM, new Item.Settings());
+    public static final Item POTATO_WHEAT = new Item(new Item.Settings());
+    public static final Item POTATO_BREAD = new Item(new Item.Settings());
+    public static final Item BAKED_POTATO_BREAD = new Item(new Item.Settings());
+    public static final Item POTATO_WHEAT_SEEDS = new AliasedBlockItem(ModBlocks.POTATO_WHEAT, new Item.Settings());
 
     public static void registerModItems() {
         registerModItem("oak_birch_sapling", OAK_BIRCH_SAPLING);
@@ -27,6 +31,10 @@ public class ModItems {
         registerModItem("winter_melon", WINTER_MELON);
         registerModItem("winter_melon_slice", WINTER_MELON_SLICE);
         registerModItem("winter_melon_seeds", WINTER_MELON_SEEDS);
+        registerModItem("potato_wheat", POTATO_WHEAT);
+        registerModItem("potato_wheat_bread", POTATO_BREAD);
+        registerModItem("baked_potato_bread", BAKED_POTATO_BREAD);
+        registerModItem("potato_wheat_seeds", POTATO_WHEAT_SEEDS);
     }
 
     public static void registerModItem(String id, Item item) {
@@ -48,5 +56,9 @@ public class ModItems {
                 entries.add(WINTER_MELON);
                 entries.add(WINTER_MELON_SLICE);
                 entries.add(WINTER_MELON_SEEDS);
+                entries.add(POTATO_WHEAT);
+                entries.add(POTATO_BREAD);
+                entries.add(BAKED_POTATO_BREAD);
+                entries.add(POTATO_WHEAT_SEEDS);
             }).build();
 }
