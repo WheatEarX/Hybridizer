@@ -91,12 +91,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter);
 
         CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(POTATO_BREAD), RecipeCategory.FOOD,
-                BAKED_POTATO_BREAD, 0.1F, 200).offerTo(exporter);
-
-        CookingRecipeJsonBuilder.createSmoking(Ingredient.ofItems(POTATO_BREAD), RecipeCategory.FOOD,
-                BAKED_POTATO_BREAD, 0.1F, 200).offerTo(exporter);
-
-        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.ofItems(POTATO_BREAD), RecipeCategory.FOOD,
-                BAKED_POTATO_BREAD, 0.1F, 600).offerTo(exporter);
+                BAKED_POTATO_BREAD, 0.1F, 200)
+                .criterion(FabricRecipeProvider.hasItem(POTATO_BREAD),
+                        FabricRecipeProvider.conditionsFromItem(POTATO_BREAD))
+                .offerTo(exporter);
     }
 }

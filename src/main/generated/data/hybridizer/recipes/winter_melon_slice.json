@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "s": {
+      "item": "minecraft:ice"
+    },
+    "w": {
+      "item": "minecraft:melon_slice"
+    }
+  },
+  "pattern": [
+    " s ",
+    "sws",
+    " s "
+  ],
+  "result": {
+    "count": 1,
+    "id": "hybridizer:winter_melon_slice"
+  }
+}

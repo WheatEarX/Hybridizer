@@ -7,6 +7,11 @@
   "block.hybridizer.winter_melon": "冰西瓜",
   "block.hybridizer.winter_melon_stem": "冰西瓜茎",
   "block.hybridizer.attached_winter_melon_stem": "结果的冰西瓜茎",
+  "block.hybridizer.potato_wheat": "土豆小麦",
   "item.hybridizer.winter_melon_slice": "冰西瓜片",
-  "item.hybridizer.winter_melon_seeds": "冰西瓜种子"
+  "item.hybridizer.winter_melon_seeds": "冰西瓜种子",
+  "item.hybridizer.potato_wheat": "土豆小麦",
+  "item.hybridizer.potato_wheat_bread": "土豆面包",
+  "item.hybridizer.baked_potato_bread": "烤土豆面包",
+  "item.hybridizer.potato_wheat_seeds": "土豆小麦种子"
 }
