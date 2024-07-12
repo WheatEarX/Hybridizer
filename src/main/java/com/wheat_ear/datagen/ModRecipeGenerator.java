@@ -73,6 +73,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(WINTER_MELON_SLICE),
                         FabricRecipeProvider.conditionsFromItem(WINTER_MELON_SLICE))
                 .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, WINTER_MELON_SNOWBALL, 2)
+                .input(WINTER_MELON_SLICE)
+                .input(SNOWBALL)
+                .criterion(FabricRecipeProvider.hasItem(WINTER_MELON_SLICE),
+                        FabricRecipeProvider.conditionsFromItem(WINTER_MELON_SLICE))
+                .criterion(FabricRecipeProvider.hasItem(SNOWBALL),
+                        FabricRecipeProvider.conditionsFromItem(SNOWBALL))
+                .offerTo(exporter);
         
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, POTATO_WHEAT_SEEDS, 2)
                 .input(POTATO)

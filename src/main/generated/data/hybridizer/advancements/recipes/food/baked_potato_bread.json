@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_potato_wheat_bread": {
+    "has_potato_bread": {
       "conditions": {
         "items": [
           {
-            "items": "hybridizer:potato_wheat_bread"
+            "items": "hybridizer:potato_bread"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_potato_wheat_bread"
+      "has_potato_bread"
     ]
   ],
   "rewards": {

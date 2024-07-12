@@ -1,19 +1,27 @@
 package com.wheat_ear;
 
 import com.wheat_ear.block.ModBlocks;
+import com.wheat_ear.entity.ModEntityType;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 
 public class HybridizerClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OAK_BIRCH_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MEGA_CHERRY_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WITHER_SPRUCE_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WITHER_LEAVES, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WITHER_MELON_STEM, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ATTACHED_WITHER_MELON_STEM, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTATO_WHEAT, RenderLayer.getCutout());
+        registerCutouts();
+        registerRenderers();
+    }
+
+    public static void registerCutouts() {
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+                ModBlocks.OAK_BIRCH_SAPLING, ModBlocks.MEGA_CHERRY_SAPLING, ModBlocks.WITHER_SPRUCE_SAPLING,
+                ModBlocks.WITHER_LEAVES, ModBlocks.WITHER_MELON_STEM, ModBlocks.ATTACHED_WITHER_MELON_STEM, ModBlocks.POTATO_WHEAT);
+    }
+
+    public static void registerRenderers() {
+        EntityRendererRegistry.register(ModEntityType.WINTER_MELON_SNOWBALL, FlyingItemEntityRenderer::new);
     }
 }
