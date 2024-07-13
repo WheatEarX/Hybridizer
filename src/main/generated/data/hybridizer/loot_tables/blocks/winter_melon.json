@@ -58,7 +58,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "minecraft:melon_slice"
+              "name": "hybridizer:winter_melon_slice"
             }
           ]
         }

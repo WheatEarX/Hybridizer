@@ -6,7 +6,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
-import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.CherryFoliagePlacer;
@@ -14,8 +13,6 @@ import net.minecraft.world.gen.foliage.SpruceFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.MegaJungleTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-
-import java.util.OptionalInt;
 
 public class ModFeatureConfigs {
     public static final TreeFeatureConfig OAK_BIRCH = builder(Blocks.OAK_LOG, Blocks.BIRCH_LEAVES, 5, 2, 0, 2)
@@ -34,7 +31,7 @@ public class ModFeatureConfigs {
     private static TreeFeatureConfig.Builder builder(Block log, Block leaves, int baseHeight, int firstRandomHeight, int secondRandomHeight, int radius) {
         return new TreeFeatureConfig.Builder(BlockStateProvider.of(log),
                 new StraightTrunkPlacer(baseHeight, firstRandomHeight, secondRandomHeight),
-                BlockStateProvider.of(leaves), new BlobFoliagePlacer(ConstantIntProvider.create(radius), ConstantIntProvider.create(0), 3),
-                new ThreeLayersFeatureSize(5, 6, 5, 6, 5, OptionalInt.of(4)));
+                BlockStateProvider.of(leaves), new BlobFoliagePlacer(ConstantIntProvider.create(radius),
+                ConstantIntProvider.create(0), 3), new TwoLayersFeatureSize(1, 0, 1));
     }
 }
