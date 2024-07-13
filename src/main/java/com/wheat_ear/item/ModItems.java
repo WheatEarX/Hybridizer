@@ -58,6 +58,7 @@ public class ModItems {
                 entries.add(WINTER_MELON);
                 entries.add(WINTER_MELON_SLICE);
                 entries.add(WINTER_MELON_SEEDS);
+                entries.add(WINTER_MELON_SNOWBALL);
                 entries.add(POTATO_WHEAT);
                 entries.add(POTATO_BREAD);
                 entries.add(BAKED_POTATO_BREAD);

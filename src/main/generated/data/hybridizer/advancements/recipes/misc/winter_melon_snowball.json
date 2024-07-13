@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_snowball": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:snowball"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hybridizer:winter_melon_snowball"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_winter_melon_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "hybridizer:winter_melon_slice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_winter_melon_slice",
+      "has_snowball"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hybridizer:winter_melon_snowball"
+    ]
+  }
+}

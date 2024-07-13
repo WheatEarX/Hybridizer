@@ -52,7 +52,7 @@ public class WinterMelonSnowballEntity extends ThrownItemEntity {
         if (status == 3) {
             ParticleEffect particleEffect = this.getParticleParameters();
 
-            for(int i = 0; i < 8; ++i) {
+            for(int i = 0; i < 20; ++i) {
                 this.getWorld().addParticle(particleEffect, this.getX(), this.getY(), this.getZ(), 0.0, 0.0, 0.0);
             }
         }
