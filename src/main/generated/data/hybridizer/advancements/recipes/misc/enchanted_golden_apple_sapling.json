@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enchanted_golden_apple": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:enchanted_golden_apple"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_oak_sapling": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:oak_sapling"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hybridizer:enchanted_golden_apple_sapling"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enchanted_golden_apple",
+      "has_oak_sapling"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hybridizer:enchanted_golden_apple_sapling"
+    ]
+  }
+}

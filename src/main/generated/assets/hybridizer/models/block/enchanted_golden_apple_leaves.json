@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "hybridizer:block/enchanted_golden_apple_leaves"
+  }
+}

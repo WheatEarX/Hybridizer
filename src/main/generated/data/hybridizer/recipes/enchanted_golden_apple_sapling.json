@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "g": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "t": {
+      "item": "minecraft:oak_sapling"
+    }
+  },
+  "pattern": [
+    "gt",
+    "tg"
+  ],
+  "result": {
+    "count": 2,
+    "id": "hybridizer:enchanted_golden_apple_sapling"
+  }
+}
