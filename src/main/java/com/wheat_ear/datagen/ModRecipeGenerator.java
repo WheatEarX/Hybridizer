@@ -31,7 +31,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(BIRCH_SAPLING))
                 .offerTo(exporter);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, MEGA_CHERRY_SAPLING, 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, MEGA_CHERRY_SAPLING, 4)
                 .pattern("cb").pattern("bc")
                 .input('c', CHERRY_SAPLING)
                 .input('b', JUNGLE_SAPLING)
@@ -103,6 +103,26 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 BAKED_POTATO_BREAD, 0.1F, 200)
                 .criterion(FabricRecipeProvider.hasItem(POTATO_BREAD),
                         FabricRecipeProvider.conditionsFromItem(POTATO_BREAD))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, GOLDEN_APPLE_SAPLING, 2)
+                .pattern("gt").pattern("tg")
+                .input('g', GOLDEN_APPLE)
+                .input('t', OAK_SAPLING)
+                .criterion(FabricRecipeProvider.hasItem(GOLDEN_APPLE),
+                        FabricRecipeProvider.conditionsFromItem(GOLDEN_APPLE))
+                .criterion(FabricRecipeProvider.hasItem(OAK_SAPLING),
+                        FabricRecipeProvider.conditionsFromItem(OAK_SAPLING))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ENCHANTED_GOLDEN_APPLE_SAPLING, 2)
+                .pattern("gt").pattern("tg")
+                .input('g', ENCHANTED_GOLDEN_APPLE)
+                .input('t', OAK_SAPLING)
+                .criterion(FabricRecipeProvider.hasItem(ENCHANTED_GOLDEN_APPLE),
+                        FabricRecipeProvider.conditionsFromItem(ENCHANTED_GOLDEN_APPLE))
+                .criterion(FabricRecipeProvider.hasItem(OAK_SAPLING),
+                        FabricRecipeProvider.conditionsFromItem(OAK_SAPLING))
                 .offerTo(exporter);
     }
 }

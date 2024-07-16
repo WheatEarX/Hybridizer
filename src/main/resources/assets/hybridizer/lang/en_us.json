@@ -8,6 +8,14 @@
   "block.hybridizer.winter_melon_stem": "Winter Melon Stem",
   "block.hybridizer.attached_winter_melon_stem": "Attached Winter Melon Stem",
   "block.hybridizer.potato_wheat": "Potato Wheat",
+  "block.hybridizer.golden_apple_sapling": "Golden Apple Sapling",
+  "block.hybridizer.golden_apple_leaves": "Golden Apple Leaves",
+  "block.hybridizer.enchanted_golden_apple_sapling": "Enchanted Golden Apple Sapling",
+  "block.hybridizer.enchanted_golden_apple_leaves": "Enchanted Golden Apple Leaves",
+  "block.hybridizer.iron_berry_bush": "Iron Berry Bush",
+  "block.hybridizer.magma_lily_pad": "Magma Lily Pad",
+  "block.hybridizer.carrot_cane": "Carrot Cane",
+  "block.hybridizer.random_sapling": "Random Sapling",
   "entity.hybridizer.winter_melon_snowball": "Winter Melon Snowball",
   "item.hybridizer.winter_melon_slice": "Winter Melon Slice",
   "item.hybridizer.winter_melon_seeds": "Winter Melon Seeds",
@@ -15,5 +23,7 @@
   "item.hybridizer.potato_wheat": "Potato Wheat",
   "item.hybridizer.potato_bread": "Potato Bread",
   "item.hybridizer.baked_potato_bread": "Baked Potato Bread",
-  "item.hybridizer.potato_wheat_seeds": "Potato Wheat Seeds"
+  "item.hybridizer.potato_wheat_seeds": "Potato Wheat Seeds",
+  "item.hybridizer.iron_berry": "Iron Berry",
+  "item.hybridizer.carrot_cane": "Carrot Cane"
 }

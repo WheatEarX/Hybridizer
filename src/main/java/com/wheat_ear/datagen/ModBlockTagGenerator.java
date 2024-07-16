@@ -7,8 +7,7 @@ import net.minecraft.registry.tag.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
 
-import static com.wheat_ear.block.ModBlocks.WINTER_MELON;
-import static com.wheat_ear.block.ModBlocks.WITHER_LEAVES;
+import static com.wheat_ear.block.ModBlocks.*;
 
 public class ModBlockTagGenerator extends FabricTagProvider.BlockTagProvider {
 
@@ -19,7 +18,7 @@ public class ModBlockTagGenerator extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
-                .add(WITHER_LEAVES);
+                .add(WITHER_LEAVES).add(GOLDEN_APPLE_LEAVES).add(ENCHANTED_GOLDEN_APPLE_LEAVES);
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(WINTER_MELON);
     }

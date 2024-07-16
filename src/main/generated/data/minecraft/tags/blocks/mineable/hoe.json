@@ -1,5 +1,7 @@
 {
   "values": [
-    "hybridizer:wither_leaves"
+    "hybridizer:wither_leaves",
+    "hybridizer:golden_apple_leaves",
+    "hybridizer:enchanted_golden_apple_leaves"
   ]
 }

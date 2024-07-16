@@ -23,6 +23,10 @@ public class ModItems {
     public static final Item POTATO_BREAD = new Item(new Item.Settings().food(ModFoodComponents.POTATO_BREAD));
     public static final Item BAKED_POTATO_BREAD = new Item(new Item.Settings().food(ModFoodComponents.BAKED_POTATO_BREAD));
     public static final Item POTATO_WHEAT_SEEDS = new AliasedBlockItem(ModBlocks.POTATO_WHEAT, new Item.Settings());
+    public static final Item GOLDEN_APPLE_SAPLING = new BlockItem(ModBlocks.GOLDEN_APPLE_SAPLING, new Item.Settings());
+    public static final Item GOLDEN_APPLE_LEAVES = new BlockItem(ModBlocks.GOLDEN_APPLE_LEAVES, new Item.Settings());
+    public static final Item ENCHANTED_GOLDEN_APPLE_SAPLING = new BlockItem(ModBlocks.ENCHANTED_GOLDEN_APPLE_SAPLING, new Item.Settings());
+    public static final Item ENCHANTED_GOLDEN_APPLE_LEAVES = new BlockItem(ModBlocks.ENCHANTED_GOLDEN_APPLE_LEAVES, new Item.Settings());
 
     public static void registerModItems() {
         registerModItem("oak_birch_sapling", OAK_BIRCH_SAPLING);
@@ -37,6 +41,10 @@ public class ModItems {
         registerModItem("potato_bread", POTATO_BREAD);
         registerModItem("baked_potato_bread", BAKED_POTATO_BREAD);
         registerModItem("potato_wheat_seeds", POTATO_WHEAT_SEEDS);
+        registerModItem("golden_apple_sapling", GOLDEN_APPLE_SAPLING);
+        registerModItem("golden_apple_leaves", GOLDEN_APPLE_LEAVES);
+        registerModItem("enchanted_golden_apple_sapling", ENCHANTED_GOLDEN_APPLE_SAPLING);
+        registerModItem("enchanted_golden_apple_leaves", ENCHANTED_GOLDEN_APPLE_LEAVES);
     }
 
     public static void registerModItem(String id, Item item) {
