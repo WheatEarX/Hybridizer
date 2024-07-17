@@ -31,16 +31,15 @@ public class ModModelGenerator extends FabricModelProvider {
 
         registerIronBerryBush(blockStateModelGenerator);
         registerMagmaLilyPad(blockStateModelGenerator);
-
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        generateItemModels(itemModelGenerator, ModItems.WINTER_MELON_SLICE, ModItems.WINTER_MELON_SNOWBALL,
+        doGenerateItemModels(itemModelGenerator, ModItems.WINTER_MELON_SLICE, ModItems.WINTER_MELON_SNOWBALL,
                 ModItems.POTATO_WHEAT, ModItems.POTATO_BREAD, ModItems.BAKED_POTATO_BREAD);
     }
 
-    public static void generateItemModels(ItemModelGenerator itemModelGenerator, Item... items) {
+    public static void doGenerateItemModels(ItemModelGenerator itemModelGenerator, Item... items) {
         for (Item item: items) {
             itemModelGenerator.register(item, Models.GENERATED);
         }

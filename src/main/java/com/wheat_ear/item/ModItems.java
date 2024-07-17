@@ -4,11 +4,13 @@ import com.wheat_ear.Hybridizer;
 import com.wheat_ear.block.ModBlocks;
 import com.wheat_ear.component.ModFoodComponents;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
     public static final Item OAK_BIRCH_SAPLING = new BlockItem(ModBlocks.OAK_BIRCH_SAPLING, new Item.Settings());
@@ -23,11 +25,11 @@ public class ModItems {
     public static final Item POTATO_BREAD = new Item(new Item.Settings().food(ModFoodComponents.POTATO_BREAD));
     public static final Item BAKED_POTATO_BREAD = new Item(new Item.Settings().food(ModFoodComponents.BAKED_POTATO_BREAD));
     public static final Item POTATO_WHEAT_SEEDS = new AliasedBlockItem(ModBlocks.POTATO_WHEAT, new Item.Settings());
-    public static final Item GOLDEN_APPLE_SAPLING = new BlockItem(ModBlocks.GOLDEN_APPLE_SAPLING, new Item.Settings());
-    public static final Item GOLDEN_APPLE_LEAVES = new BlockItem(ModBlocks.GOLDEN_APPLE_LEAVES, new Item.Settings());
-    public static final Item ENCHANTED_GOLDEN_APPLE_SAPLING = new BlockItem(ModBlocks.ENCHANTED_GOLDEN_APPLE_SAPLING, new Item.Settings());
-    public static final Item ENCHANTED_GOLDEN_APPLE_LEAVES = new BlockItem(ModBlocks.ENCHANTED_GOLDEN_APPLE_LEAVES, new Item.Settings());
-    public static final Item IRON_BERRIES = new IronBerriesItem(ModBlocks.IRON_BERRY_BUSH, new Item.Settings());
+    public static final Item GOLDEN_APPLE_SAPLING = new BlockItem(ModBlocks.GOLDEN_APPLE_SAPLING, new Item.Settings().rarity(Rarity.RARE));
+    public static final Item GOLDEN_APPLE_LEAVES = new BlockItem(ModBlocks.GOLDEN_APPLE_LEAVES, new Item.Settings().rarity(Rarity.RARE));
+    public static final Item ENCHANTED_GOLDEN_APPLE_SAPLING = new BlockItem(ModBlocks.ENCHANTED_GOLDEN_APPLE_SAPLING, new Item.Settings().rarity(Rarity.EPIC).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true));
+    public static final Item ENCHANTED_GOLDEN_APPLE_LEAVES = new BlockItem(ModBlocks.ENCHANTED_GOLDEN_APPLE_LEAVES, new Item.Settings().rarity(Rarity.EPIC).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true));
+    public static final Item IRON_BERRIES = new IronBerriesItem(ModBlocks.IRON_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.IRON_BERRIES));
     public static final Item MAGMA_LILY_PAD = new PlaceableOnWaterItem(ModBlocks.MAGMA_LILY_PAD, new Item.Settings());
 
     public static void registerModItems() {

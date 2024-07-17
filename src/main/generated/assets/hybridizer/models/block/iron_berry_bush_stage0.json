@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "hybridizer:block/iron_berry_bush_stage0"
+  }
+}

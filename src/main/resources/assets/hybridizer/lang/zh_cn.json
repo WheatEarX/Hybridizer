@@ -8,6 +8,14 @@
   "block.hybridizer.winter_melon_stem": "冰西瓜茎",
   "block.hybridizer.attached_winter_melon_stem": "结果的冰西瓜茎",
   "block.hybridizer.potato_wheat": "土豆小麦",
+  "block.hybridizer.golden_apple_sapling": "金苹果树苗",
+  "block.hybridizer.golden_apple_leaves": "金苹果树叶",
+  "block.hybridizer.enchanted_golden_apple_sapling": "附魔金苹果树苗",
+  "block.hybridizer.enchanted_golden_apple_leaves": "附魔金苹果树叶",
+  "block.hybridizer.iron_berry_bush": "铁浆果",
+  "block.hybridizer.magma_lily_pad": "熔岩睡莲",
+  "block.hybridizer.carrot_cane": "胡萝卜甘蔗",
+  "block.hybridizer.random_sapling": "随机树苗",
   "entity.hybridizer.winter_melon_snowball": "冰西瓜雪球",
   "item.hybridizer.winter_melon_slice": "冰西瓜片",
   "item.hybridizer.winter_melon_seeds": "冰西瓜种子",
@@ -15,5 +23,9 @@
   "item.hybridizer.potato_wheat": "土豆小麦",
   "item.hybridizer.potato_bread": "土豆面包",
   "item.hybridizer.baked_potato_bread": "烤土豆面包",
-  "item.hybridizer.potato_wheat_seeds": "土豆小麦种子"
+  "item.hybridizer.potato_wheat_seeds": "土豆小麦种子",
+  "item.hybridizer.iron_berries": "铁浆果",
+  "item.hybridizer.carrot_cane": "胡萝卜甘蔗",
+  "item.hybridizer.carrot_sugar": "胡萝卜糖",
+  "item.hybridizer.golden_carrot_sugar": "金胡萝卜糖"
 }
