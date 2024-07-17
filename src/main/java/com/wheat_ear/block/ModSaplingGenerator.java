@@ -12,4 +12,8 @@ public class ModSaplingGenerator {
             Optional.of(ModConfiguredFeatures.MEGA_CHERRY), Optional.empty(), Optional.empty());
     public static final SaplingGenerator WITHER_SPRUCE = new SaplingGenerator("wither_spruce",
             Optional.empty(), Optional.of(ModConfiguredFeatures.WITHER_SPRUCE), Optional.empty());
+    public static final SaplingGenerator GOLDEN_APPLE_TREE = new SaplingGenerator("golden_apple_tree",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.GOLDEN_APPLE_TREE), Optional.empty());
+    public static final SaplingGenerator ENCHANTED_GOLDEN_APPLE_TREE = new SaplingGenerator("enchanted_golden_apple_tree",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.ENCHANTED_GOLDEN_APPLE_TREE), Optional.empty());
 }

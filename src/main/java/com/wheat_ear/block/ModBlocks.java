@@ -22,12 +22,14 @@ public class ModBlocks {
             ModRegistryKeys.WINTER_MELON_STEM, ModRegistryKeys.WINTER_MELON_SEEDS,
             AbstractBlock.Settings.copy(Blocks.ATTACHED_MELON_STEM));
     public static final Block POTATO_WHEAT = new PotatoWheatBlock(AbstractBlock.Settings.copy(Blocks.WHEAT));
-    public static final Block GOLDEN_APPLE_SAPLING = new SaplingBlock(ModSaplingGenerator.WITHER_SPRUCE,
+    public static final Block GOLDEN_APPLE_SAPLING = new SaplingBlock(ModSaplingGenerator.GOLDEN_APPLE_TREE,
             AbstractBlock.Settings.copy(Blocks.OAK_SAPLING));
     public static final Block GOLDEN_APPLE_LEAVES = new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.GOLD));
-    public static final Block ENCHANTED_GOLDEN_APPLE_SAPLING = new SaplingBlock(ModSaplingGenerator.WITHER_SPRUCE,
+    public static final Block ENCHANTED_GOLDEN_APPLE_SAPLING = new SaplingBlock(ModSaplingGenerator.ENCHANTED_GOLDEN_APPLE_TREE,
             AbstractBlock.Settings.copy(Blocks.OAK_SAPLING));
     public static final Block ENCHANTED_GOLDEN_APPLE_LEAVES = new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.GOLD));
+    public static final Block IRON_BERRY_BUSH = new IronBerryBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH));
+    public static final Block MAGMA_LILY_PAD = new MagmaLilyPadBlock(AbstractBlock.Settings.copy(Blocks.LILY_PAD));
 
     public static void registerModBlocks() {
         registerModBlock("oak_birch_sapling", OAK_BIRCH_SAPLING);
@@ -42,6 +44,8 @@ public class ModBlocks {
         registerModBlock("golden_apple_leaves", GOLDEN_APPLE_LEAVES);
         registerModBlock("enchanted_golden_apple_sapling", ENCHANTED_GOLDEN_APPLE_SAPLING);
         registerModBlock("enchanted_golden_apple_leaves", ENCHANTED_GOLDEN_APPLE_LEAVES);
+        registerModBlock("iron_berry_bush", IRON_BERRY_BUSH);
+        registerModBlock("magma_lily_pad", MAGMA_LILY_PAD);
     }
 
     public static void registerModBlock(String id, Block block) {

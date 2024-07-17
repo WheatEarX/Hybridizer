@@ -4,10 +4,7 @@ import com.wheat_ear.block.ModBlocks;
 import com.wheat_ear.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
-import net.minecraft.data.client.TexturedModel;
+import net.minecraft.data.client.*;
 import net.minecraft.item.Item;
 import net.minecraft.state.property.Properties;
 
@@ -31,6 +28,10 @@ public class ModModelGenerator extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(ModBlocks.ENCHANTED_GOLDEN_APPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerSingleton(ModBlocks.GOLDEN_APPLE_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.registerSingleton(ModBlocks.ENCHANTED_GOLDEN_APPLE_LEAVES, TexturedModel.LEAVES);
+
+        registerIronBerryBush(blockStateModelGenerator);
+        registerMagmaLilyPad(blockStateModelGenerator);
+
     }
 
     @Override
@@ -43,5 +44,18 @@ public class ModModelGenerator extends FabricModelProvider {
         for (Item item: items) {
             itemModelGenerator.register(item, Models.GENERATED);
         }
+    }
+
+    private static void registerIronBerryBush(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerItemModel(ModItems.IRON_BERRIES);
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.IRON_BERRY_BUSH).coordinate(BlockStateVariantMap.create(Properties.AGE_3).register(
+                stage -> BlockStateVariant.create().put(VariantSettings.MODEL, blockStateModelGenerator.createSubModel(ModBlocks.IRON_BERRY_BUSH, "_stage" + stage, Models.CROSS, TextureMap::cross)))));
+    }
+
+    private static void registerMagmaLilyPad(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerItemModel(ModItems.MAGMA_LILY_PAD);
+        blockStateModelGenerator.blockStateCollector.accept(
+                BlockStateModelGenerator.createBlockStateWithRandomHorizontalRotations(ModBlocks.MAGMA_LILY_PAD,
+                        ModelIds.getBlockModelId(ModBlocks.MAGMA_LILY_PAD)));
     }
 }

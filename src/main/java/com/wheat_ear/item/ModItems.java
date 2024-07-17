@@ -27,6 +27,8 @@ public class ModItems {
     public static final Item GOLDEN_APPLE_LEAVES = new BlockItem(ModBlocks.GOLDEN_APPLE_LEAVES, new Item.Settings());
     public static final Item ENCHANTED_GOLDEN_APPLE_SAPLING = new BlockItem(ModBlocks.ENCHANTED_GOLDEN_APPLE_SAPLING, new Item.Settings());
     public static final Item ENCHANTED_GOLDEN_APPLE_LEAVES = new BlockItem(ModBlocks.ENCHANTED_GOLDEN_APPLE_LEAVES, new Item.Settings());
+    public static final Item IRON_BERRIES = new IronBerriesItem(ModBlocks.IRON_BERRY_BUSH, new Item.Settings());
+    public static final Item MAGMA_LILY_PAD = new PlaceableOnWaterItem(ModBlocks.MAGMA_LILY_PAD, new Item.Settings());
 
     public static void registerModItems() {
         registerModItem("oak_birch_sapling", OAK_BIRCH_SAPLING);
@@ -45,6 +47,8 @@ public class ModItems {
         registerModItem("golden_apple_leaves", GOLDEN_APPLE_LEAVES);
         registerModItem("enchanted_golden_apple_sapling", ENCHANTED_GOLDEN_APPLE_SAPLING);
         registerModItem("enchanted_golden_apple_leaves", ENCHANTED_GOLDEN_APPLE_LEAVES);
+        registerModItem("iron_berries", IRON_BERRIES);
+        registerModItem("magma_lily_pad", MAGMA_LILY_PAD);
     }
 
     public static void registerModItem(String id, Item item) {
@@ -58,18 +62,16 @@ public class ModItems {
     public static final ItemGroup HYBRIDIZERS = FabricItemGroup.builder()
             .displayName(Text.translatable("itemGroup.hybridizers"))
             .icon(() -> new ItemStack(OAK_BIRCH_SAPLING))
-            .entries((context, entries) -> {
-                entries.add(OAK_BIRCH_SAPLING);
-                entries.add(MEGA_CHERRY_SAPLING);
-                entries.add(WITHER_SPRUCE_SAPLING);
-                entries.add(WITHER_LEAVES);
-                entries.add(WINTER_MELON);
-                entries.add(WINTER_MELON_SLICE);
-                entries.add(WINTER_MELON_SEEDS);
-                entries.add(WINTER_MELON_SNOWBALL);
-                entries.add(POTATO_WHEAT);
-                entries.add(POTATO_BREAD);
-                entries.add(BAKED_POTATO_BREAD);
-                entries.add(POTATO_WHEAT_SEEDS);
-            }).build();
+            .entries((context, entries) ->
+                addEntries(entries, OAK_BIRCH_SAPLING, MEGA_CHERRY_SAPLING, WITHER_SPRUCE_SAPLING, WITHER_LEAVES,
+                        WINTER_MELON, WINTER_MELON_SLICE, WINTER_MELON_SEEDS, WINTER_MELON_SNOWBALL, POTATO_WHEAT,
+                        POTATO_BREAD, BAKED_POTATO_BREAD, POTATO_WHEAT_SEEDS, GOLDEN_APPLE_SAPLING, GOLDEN_APPLE_LEAVES,
+                        ENCHANTED_GOLDEN_APPLE_SAPLING, ENCHANTED_GOLDEN_APPLE_LEAVES, IRON_BERRIES, MAGMA_LILY_PAD)
+            ).build();
+
+    private static void addEntries(ItemGroup.Entries entries, Item... items) {
+        for (Item item: items) {
+            entries.add(item);
+        }
+    }
 }

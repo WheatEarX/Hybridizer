@@ -6,6 +6,7 @@ import com.wheat_ear.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
@@ -50,6 +51,20 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.GOLDEN_APPLE_LEAVES, block -> goldenAppleLeavesDrops(block, ModBlocks.GOLDEN_APPLE_SAPLING, Items.GOLDEN_APPLE, SAPLING_DROP_CHANCE));
         addDrop(ModBlocks.ENCHANTED_GOLDEN_APPLE_LEAVES, block -> goldenAppleLeavesDrops(block, ModBlocks.ENCHANTED_GOLDEN_APPLE_SAPLING, Items.ENCHANTED_GOLDEN_APPLE, SAPLING_DROP_CHANCE));
+
+        addDrop(ModBlocks.IRON_BERRY_BUSH, block -> applyExplosionDecay(block,
+                LootTable.builder().pool(LootPool.builder().conditionally(BlockStatePropertyLootCondition.builder(ModBlocks.IRON_BERRY_BUSH)
+                        .properties(StatePredicate.Builder.create().exactMatch(SweetBerryBushBlock.AGE, 3)))
+                        .with(ItemEntry.builder(ModItems.IRON_BERRIES))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 3.0F)))
+                        .apply(ApplyBonusLootFunction.uniformBonusCount(Enchantments.FORTUNE)))
+                        .pool(LootPool.builder().conditionally(BlockStatePropertyLootCondition.builder(ModBlocks.IRON_BERRY_BUSH)
+                                .properties(StatePredicate.Builder.create().exactMatch(SweetBerryBushBlock.AGE, 2)))
+                                .with(ItemEntry.builder(ModItems.IRON_BERRIES))
+                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
+                                .apply(ApplyBonusLootFunction.uniformBonusCount(Enchantments.FORTUNE)))));
+
+        addDrop(ModBlocks.MAGMA_LILY_PAD);
     }
 
     public LootTable.Builder goldenAppleLeavesDrops(Block leaves, Block drop, Item apple, float... chance) {

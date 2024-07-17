@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "hybridizer:block/magma_lily_pad"
+      },
+      {
+        "model": "hybridizer:block/magma_lily_pad",
+        "y": 90
+      },
+      {
+        "model": "hybridizer:block/magma_lily_pad",
+        "y": 180
+      },
+      {
+        "model": "hybridizer:block/magma_lily_pad",
+        "y": 270
+      }
+    ]
+  }
+}
