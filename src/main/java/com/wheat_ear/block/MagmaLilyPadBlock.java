@@ -49,9 +49,9 @@ public class MagmaLilyPadBlock extends LilyPadBlock {
         double d = pos.getX() + vec3d.x;
         double e = pos.getZ() + vec3d.z;
 
-        for (int i = 0; i < 6; ++i) {
+        for (int i = 0; i < 8; ++i) {
             if (random.nextBoolean()) {
-                world.addParticle(ParticleTypes.DRIPPING_LAVA, d + random.nextDouble() / 5.0, pos.getY() + (0.5 - random.nextDouble()), e + random.nextDouble() / 5.0, 0.0, 0.0, 0.0);
+                world.addParticle(ParticleTypes.FLAME, d + random.nextDouble() / 5.0, pos.getY() + (0.5 - random.nextDouble()), e + random.nextDouble() / 5.0, 0.0, 0.0, 0.0);
             }
         }
     }

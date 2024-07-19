@@ -31,6 +31,7 @@ public class ModItems {
     public static final Item ENCHANTED_GOLDEN_APPLE_LEAVES = new BlockItem(ModBlocks.ENCHANTED_GOLDEN_APPLE_LEAVES, new Item.Settings().rarity(Rarity.EPIC).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true));
     public static final Item IRON_BERRIES = new IronBerriesItem(ModBlocks.IRON_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.IRON_BERRIES));
     public static final Item MAGMA_LILY_PAD = new PlaceableOnWaterItem(ModBlocks.MAGMA_LILY_PAD, new Item.Settings());
+    public static final Item RANDOM_SAPLING = new BlockItem(ModBlocks.RANDOM_SAPLING, new Item.Settings());
 
     public static void registerModItems() {
         registerModItem("oak_birch_sapling", OAK_BIRCH_SAPLING);
@@ -51,6 +52,7 @@ public class ModItems {
         registerModItem("enchanted_golden_apple_leaves", ENCHANTED_GOLDEN_APPLE_LEAVES);
         registerModItem("iron_berries", IRON_BERRIES);
         registerModItem("magma_lily_pad", MAGMA_LILY_PAD);
+        registerModItem("random_sapling", RANDOM_SAPLING);
     }
 
     public static void registerModItem(String id, Item item) {

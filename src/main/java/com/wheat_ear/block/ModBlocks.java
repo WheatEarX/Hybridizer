@@ -30,6 +30,10 @@ public class ModBlocks {
     public static final Block ENCHANTED_GOLDEN_APPLE_LEAVES = new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.GOLD));
     public static final Block IRON_BERRY_BUSH = new IronBerryBushBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH));
     public static final Block MAGMA_LILY_PAD = new MagmaLilyPadBlock(AbstractBlock.Settings.copy(Blocks.LILY_PAD));
+    public static final Block RANDOM_SAPLING = new RandomSaplingBlock(ModSaplingGenerator.RANDOM_TREE,
+            AbstractBlock.Settings.copy(Blocks.OAK_SAPLING));
+    public static final Block RANDOM_MEDIUM_LOG = new Block(AbstractBlock.Settings.create());
+    public static final Block RANDOM_MEDIUM_LEAVES = new Block(AbstractBlock.Settings.create());
 
     public static void registerModBlocks() {
         registerModBlock("oak_birch_sapling", OAK_BIRCH_SAPLING);
@@ -46,6 +50,9 @@ public class ModBlocks {
         registerModBlock("enchanted_golden_apple_leaves", ENCHANTED_GOLDEN_APPLE_LEAVES);
         registerModBlock("iron_berry_bush", IRON_BERRY_BUSH);
         registerModBlock("magma_lily_pad", MAGMA_LILY_PAD);
+        registerModBlock("random_sapling", RANDOM_SAPLING);
+        registerModBlock("random_medium_log", RANDOM_MEDIUM_LOG);
+        registerModBlock("random_medium_leaves", RANDOM_MEDIUM_LEAVES);
     }
 
     public static void registerModBlock(String id, Block block) {

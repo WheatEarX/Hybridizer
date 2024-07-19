@@ -16,4 +16,6 @@ public class ModSaplingGenerator {
             Optional.empty(), Optional.of(ModConfiguredFeatures.GOLDEN_APPLE_TREE), Optional.empty());
     public static final SaplingGenerator ENCHANTED_GOLDEN_APPLE_TREE = new SaplingGenerator("enchanted_golden_apple_tree",
             Optional.empty(), Optional.of(ModConfiguredFeatures.ENCHANTED_GOLDEN_APPLE_TREE), Optional.empty());
+    public static final SaplingGenerator RANDOM_TREE = new SaplingGenerator("random_tree",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.RANDOM_TREE), Optional.empty());
 }

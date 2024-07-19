@@ -17,6 +17,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> WITHER_SPRUCE = of("wither_spruce");
     public static final RegistryKey<PlacedFeature> GOLDEN_APPLE_TREE = of("golden_apple_tree");
     public static final RegistryKey<PlacedFeature> ENCHANTED_GOLDEN_APPLE_TREE = of("enchanted_golden_apple_tree");
+    public static final RegistryKey<PlacedFeature> RANDOM_TREE = of("random_tree");
 
     public static void bootstrap(Registerable<PlacedFeature> featureRegisterable) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -34,6 +35,9 @@ public class ModPlacedFeatures {
 
         PlacedFeatures.register(featureRegisterable, ENCHANTED_GOLDEN_APPLE_TREE, registryEntryLookup.getOrThrow(ModConfiguredFeatures.ENCHANTED_GOLDEN_APPLE_TREE),
                 PlacedFeatures.wouldSurvive(ModBlocks.ENCHANTED_GOLDEN_APPLE_SAPLING));
+
+        PlacedFeatures.register(featureRegisterable, RANDOM_TREE, registryEntryLookup.getOrThrow(ModConfiguredFeatures.RANDOM_TREE),
+                PlacedFeatures.wouldSurvive(ModBlocks.RANDOM_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> of(String id) {

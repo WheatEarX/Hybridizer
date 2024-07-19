@@ -31,6 +31,8 @@ public class ModModelGenerator extends FabricModelProvider {
 
         registerIronBerryBush(blockStateModelGenerator);
         registerMagmaLilyPad(blockStateModelGenerator);
+
+        blockStateModelGenerator.registerTintableCross(ModBlocks.RANDOM_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

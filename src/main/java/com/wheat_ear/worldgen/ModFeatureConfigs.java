@@ -29,6 +29,8 @@ public class ModFeatureConfigs {
             .ignoreVines().build();
     public static final TreeFeatureConfig ENCHANTED_GOLDEN_APPLE_TREE = builder(Blocks.OAK_LOG, ModBlocks.ENCHANTED_GOLDEN_APPLE_LEAVES, 4, 2, 0, 2)
             .ignoreVines().build();
+    public static final TreeFeatureConfig RANDOM_TREE = builder(ModBlocks.RANDOM_MEDIUM_LOG, ModBlocks.RANDOM_MEDIUM_LEAVES, 4, 2, 0, 2)
+            .ignoreVines().build();
 
     @SuppressWarnings("SameParameterValue")
     private static TreeFeatureConfig.Builder builder(Block log, Block leaves, int baseHeight, int firstRandomHeight, int secondRandomHeight, int radius) {
