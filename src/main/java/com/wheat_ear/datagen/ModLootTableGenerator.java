@@ -65,6 +65,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
                                 .apply(ApplyBonusLootFunction.uniformBonusCount(Enchantments.FORTUNE)))));
 
         addDrop(ModBlocks.MAGMA_LILY_PAD);
+        addDrop(ModBlocks.CARROT_CANE);
+        addDrop(ModBlocks.RANDOM_SAPLING);
     }
 
     public LootTable.Builder goldenAppleLeavesDrops(Block leaves, Block drop, Item apple, float... chance) {

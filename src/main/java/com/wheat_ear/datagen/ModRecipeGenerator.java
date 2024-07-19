@@ -124,5 +124,50 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(OAK_SAPLING),
                         FabricRecipeProvider.conditionsFromItem(OAK_SAPLING))
                 .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, IRON_BERRIES, 4)
+                .pattern(" i ").pattern("ibi").pattern(" i ")
+                .input('i', IRON_INGOT)
+                .input('b', SWEET_BERRIES)
+                .criterion(FabricRecipeProvider.hasItem(IRON_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(IRON_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(SWEET_BERRIES),
+                        FabricRecipeProvider.conditionsFromItem(SWEET_BERRIES))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, MAGMA_LILY_PAD, 4)
+                .pattern(" m ").pattern("mlm").pattern(" m ")
+                .input('m', MAGMA_CREAM)
+                .input('l', LILY_PAD)
+                .criterion(FabricRecipeProvider.hasItem(MAGMA_CREAM),
+                        FabricRecipeProvider.conditionsFromItem(MAGMA_CREAM))
+                .criterion(FabricRecipeProvider.hasItem(LILY_PAD),
+                        FabricRecipeProvider.conditionsFromItem(LILY_PAD))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, CARROT_CANE, 2)
+                .input(SUGAR_CANE)
+                .input(CARROT)
+                .criterion(FabricRecipeProvider.hasItem(SUGAR_CANE),
+                        FabricRecipeProvider.conditionsFromItem(SUGAR_CANE))
+                .criterion(FabricRecipeProvider.hasItem(CARROT),
+                        FabricRecipeProvider.conditionsFromItem(CARROT))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, CARROT_SUGAR, 1)
+                .input(CARROT_CANE)
+                .criterion(FabricRecipeProvider.hasItem(CARROT_CANE),
+                        FabricRecipeProvider.conditionsFromItem(CARROT_CANE))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, GOLDEN_CARROT_SUGAR, 1)
+                .pattern("ggg").pattern("gcg").pattern("ggg")
+                .input('g', GOLD_NUGGET)
+                .input('c', CARROT_SUGAR)
+                .criterion(FabricRecipeProvider.hasItem(GOLD_NUGGET),
+                        FabricRecipeProvider.conditionsFromItem(GOLD_NUGGET))
+                .criterion(FabricRecipeProvider.hasItem(CARROT_SUGAR),
+                        FabricRecipeProvider.conditionsFromItem(CARROT_SUGAR))
+                .offerTo(exporter);
     }
 }

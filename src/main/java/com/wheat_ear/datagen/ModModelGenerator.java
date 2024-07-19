@@ -32,13 +32,16 @@ public class ModModelGenerator extends FabricModelProvider {
         registerIronBerryBush(blockStateModelGenerator);
         registerMagmaLilyPad(blockStateModelGenerator);
 
+        blockStateModelGenerator.registerTintableCross(ModBlocks.CARROT_CANE, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerTintableCross(ModBlocks.RANDOM_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerBuiltin(ModBlocks.RANDOM_MEDIUM_LOG, ModBlocks.RANDOM_MEDIUM_LOG);
+        blockStateModelGenerator.registerBuiltin(ModBlocks.RANDOM_MEDIUM_LEAVES, ModBlocks.RANDOM_MEDIUM_LEAVES);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         doGenerateItemModels(itemModelGenerator, ModItems.WINTER_MELON_SLICE, ModItems.WINTER_MELON_SNOWBALL,
-                ModItems.POTATO_WHEAT, ModItems.POTATO_BREAD, ModItems.BAKED_POTATO_BREAD);
+                ModItems.POTATO_WHEAT, ModItems.POTATO_BREAD, ModItems.BAKED_POTATO_BREAD, ModItems.CARROT_CANE);
     }
 
     public static void doGenerateItemModels(ItemModelGenerator itemModelGenerator, Item... items) {

@@ -21,7 +21,7 @@ public class HybridizerClient implements ClientModInitializer {
                 ModBlocks.WITHER_LEAVES, ModBlocks.WITHER_MELON_STEM, ModBlocks.ATTACHED_WITHER_MELON_STEM,
                 ModBlocks.POTATO_WHEAT, ModBlocks.GOLDEN_APPLE_SAPLING, ModBlocks.GOLDEN_APPLE_LEAVES,
                 ModBlocks.ENCHANTED_GOLDEN_APPLE_SAPLING, ModBlocks.ENCHANTED_GOLDEN_APPLE_LEAVES,
-                ModBlocks.IRON_BERRY_BUSH, ModBlocks.MAGMA_LILY_PAD, ModBlocks.RANDOM_SAPLING);
+                ModBlocks.IRON_BERRY_BUSH, ModBlocks.CARROT_CANE, ModBlocks.MAGMA_LILY_PAD, ModBlocks.RANDOM_SAPLING);
     }
 
     public static void registerRenderers() {
