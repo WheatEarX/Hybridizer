@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "l": {
+      "item": "minecraft:lily_pad"
+    },
+    "m": {
+      "item": "minecraft:magma_cream"
+    }
+  },
+  "pattern": [
+    " m ",
+    "mlm",
+    " m "
+  ],
+  "result": {
+    "count": 4,
+    "id": "hybridizer:magma_lily_pad"
+  }
+}

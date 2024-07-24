@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "hybridizer:magma_lily_pad"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "hybridizer:bottle_of_magma"
+  }
+}

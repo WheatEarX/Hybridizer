@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "g": {
+      "item": "minecraft:egg"
+    },
+    "m": {
+      "item": "minecraft:milk_bucket"
+    },
+    "s": {
+      "item": "hybridizer:golden_carrot_sugar"
+    },
+    "w": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    "mmm",
+    "sgs",
+    "www"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hybridizer:golden_carrot_cake"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:sweet_berries"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " i ",
+    "ibi",
+    " i "
+  ],
+  "result": {
+    "count": 4,
+    "id": "hybridizer:iron_berries"
+  }
+}

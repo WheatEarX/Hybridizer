@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "hybridizer:carrot_sugar"
+    },
+    "g": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    "ggg",
+    "gcg",
+    "ggg"
+  ],
+  "result": {
+    "count": 1,
+    "id": "hybridizer:golden_carrot_sugar"
+  }
+}
