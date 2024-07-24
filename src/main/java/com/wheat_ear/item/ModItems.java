@@ -31,9 +31,11 @@ public class ModItems {
     public static final Item ENCHANTED_GOLDEN_APPLE_LEAVES = new BlockItem(ModBlocks.ENCHANTED_GOLDEN_APPLE_LEAVES, new Item.Settings().rarity(Rarity.EPIC).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true));
     public static final Item IRON_BERRIES = new IronBerriesItem(ModBlocks.IRON_BERRY_BUSH, new Item.Settings().food(ModFoodComponents.IRON_BERRIES));
     public static final Item MAGMA_LILY_PAD = new PlaceableOnWaterItem(ModBlocks.MAGMA_LILY_PAD, new Item.Settings());
+    public static final Item BOTTLE_OF_MAGMA = new BottleOfMagmaItem(new Item.Settings().maxCount(1).food(ModFoodComponents.BOTTLE_OF_MAGMA));
     public static final Item CARROT_CANE = new AliasedBlockItem(ModBlocks.CARROT_CANE, new Item.Settings());
     public static final Item CARROT_SUGAR = new Item(new Item.Settings());
     public static final Item GOLDEN_CARROT_SUGAR = new Item(new Item.Settings());
+    public static final Item GOLDEN_CARROT_CAKE = new GoldenCarrotCakeItem(new Item.Settings().maxCount(1).maxDamage(8).food(ModFoodComponents.GOLDEN_CARROT_CAKE));
     public static final Item RANDOM_SAPLING = new BlockItem(ModBlocks.RANDOM_SAPLING, new Item.Settings());
 
     public static void registerModItems() {
@@ -55,10 +57,12 @@ public class ModItems {
         registerModItem("enchanted_golden_apple_leaves", ENCHANTED_GOLDEN_APPLE_LEAVES);
         registerModItem("iron_berries", IRON_BERRIES);
         registerModItem("magma_lily_pad", MAGMA_LILY_PAD);
+        registerModItem("bottle_of_magma", BOTTLE_OF_MAGMA);
         registerModItem("carrot_cane", CARROT_CANE);
         registerModItem("carrot_sugar", CARROT_SUGAR);
         registerModItem("golden_carrot_sugar", GOLDEN_CARROT_SUGAR);
         registerModItem("random_sapling", RANDOM_SAPLING);
+        registerModItem("golden_carrot_cake", GOLDEN_CARROT_CAKE);
     }
 
     public static void registerModItem(String id, Item item) {
@@ -77,7 +81,7 @@ public class ModItems {
                         WINTER_MELON, WINTER_MELON_SLICE, WINTER_MELON_SEEDS, WINTER_MELON_SNOWBALL, POTATO_WHEAT,
                         POTATO_BREAD, BAKED_POTATO_BREAD, POTATO_WHEAT_SEEDS, GOLDEN_APPLE_SAPLING, GOLDEN_APPLE_LEAVES,
                         ENCHANTED_GOLDEN_APPLE_SAPLING, ENCHANTED_GOLDEN_APPLE_LEAVES, IRON_BERRIES, MAGMA_LILY_PAD,
-                        CARROT_CANE, CARROT_SUGAR, GOLDEN_CARROT_SUGAR, RANDOM_SAPLING)
+                        BOTTLE_OF_MAGMA, CARROT_CANE, CARROT_SUGAR, GOLDEN_CARROT_SUGAR, GOLDEN_CARROT_CAKE, RANDOM_SAPLING)
             ).build();
 
     private static void addEntries(ItemGroup.Entries entries, Item... items) {

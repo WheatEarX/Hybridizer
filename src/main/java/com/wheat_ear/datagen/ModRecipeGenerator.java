@@ -135,6 +135,12 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(SWEET_BERRIES))
                 .offerTo(exporter);
 
+        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(IRON_BERRIES), RecipeCategory.FOOD,
+                        IRON_NUGGET, 0.1F, 200)
+                .criterion(FabricRecipeProvider.hasItem(IRON_BERRIES),
+                        FabricRecipeProvider.conditionsFromItem(IRON_BERRIES))
+                .offerTo(exporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, MAGMA_LILY_PAD, 4)
                 .pattern(" m ").pattern("mlm").pattern(" m ")
                 .input('m', MAGMA_CREAM)
@@ -143,6 +149,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(MAGMA_CREAM))
                 .criterion(FabricRecipeProvider.hasItem(LILY_PAD),
                         FabricRecipeProvider.conditionsFromItem(LILY_PAD))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, BOTTLE_OF_MAGMA, 1)
+                .input(GLASS_BOTTLE)
+                .input(MAGMA_LILY_PAD)
+                .criterion(FabricRecipeProvider.hasItem(GLASS_BOTTLE),
+                        FabricRecipeProvider.conditionsFromItem(GLASS_BOTTLE))
+                .criterion(FabricRecipeProvider.hasItem(MAGMA_LILY_PAD),
+                        FabricRecipeProvider.conditionsFromItem(MAGMA_LILY_PAD))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, CARROT_CANE, 2)
@@ -168,6 +183,22 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(GOLD_NUGGET))
                 .criterion(FabricRecipeProvider.hasItem(CARROT_SUGAR),
                         FabricRecipeProvider.conditionsFromItem(CARROT_SUGAR))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, GOLDEN_CARROT_CAKE, 1)
+                .pattern("mmm").pattern("sgs").pattern("www")
+                .input('m', MILK_BUCKET)
+                .input('s', GOLDEN_CARROT_SUGAR)
+                .input('g', EGG)
+                .input('w', WHEAT)
+                .criterion(FabricRecipeProvider.hasItem(MILK_BUCKET),
+                        FabricRecipeProvider.conditionsFromItem(MILK_BUCKET))
+                .criterion(FabricRecipeProvider.hasItem(GOLDEN_CARROT_SUGAR),
+                        FabricRecipeProvider.conditionsFromItem(GOLDEN_CARROT_SUGAR))
+                .criterion(FabricRecipeProvider.hasItem(EGG),
+                        FabricRecipeProvider.conditionsFromItem(EGG))
+                .criterion(FabricRecipeProvider.hasItem(WHEAT),
+                        FabricRecipeProvider.conditionsFromItem(WHEAT))
                 .offerTo(exporter);
     }
 }

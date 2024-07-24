@@ -3,9 +3,9 @@
 	"id": "hybridizer",
 	"version": "${version}",
 	"name": "Mod Hybridizer",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Nothing",
 	"authors": [
-		"Me!"
+		"DenseLight"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
